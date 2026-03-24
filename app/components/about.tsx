@@ -1,14 +1,28 @@
+"use client"
 
+import { useState, useEffect } from "react";
 
 export default function AboutUs(){
+
+    const [smallScreen, setSmallScreen ] = useState(false);
+
+
+    useEffect(()=>{
+
+        setSmallScreen(window.innerWidth<768)
+
+    },[])
     return(
         <div className="flex flex-col border-t border-black">
 
-            <div className="h-[480px] flex items-center w-full">
+            <div className="md:h-[480px] h-auto flex flex-row flex-wrap items-center w-full">
 
-                <div className=" h-full bg-[#808CFD] w-[66.67%] flex flex-col justify-between p-8">
+                 { smallScreen &&   <img src="/image3.jpeg" alt="image3" className="md:w-[33.33%] w-full h-[225px] md:h-full object-cover " />}
+
+                <div className=" h-full bg-[#808CFD] w-full md:w-[66.67%] flex flex-col justify-between px-4 md:gap-0 gap-14 
+                 py-[30px] md:p-8">
                     
-                    <div className="font-bold [font-family:var(--font-anek-tamil)] text-5xl">
+                    <div className="font-bold [font-family:var(--font-anek-tamil)] text-3xl md:text-5xl leading-none">
                         TAP INTO YOUR PRIMAL POWER. FORGE A STRONGER YOU.
                     </div>
 
@@ -22,17 +36,17 @@ export default function AboutUs(){
 
                 </div>
 
-                <img src="/image3.jpeg" alt="image3" className="w-[33.33%] h-full object-cover " />
+            { !smallScreen &&   <img src="/image3.jpeg" alt="image3" className="md:w-[33.33%] w-full h-[430px] md:h-full object-cover " />}
 
             </div>
 
-              <div className="h-[480px] flex items-center w-full">
+              <div className="md:h-[480px] h-full flex flex-row flex-wrap items-center w-full">
 
-                     <img src="/image3.jpeg" alt="image3" className="w-[66.67%] h-full object-cover " />
+                   <img src="/image3.jpeg" alt="image3" className="md:w-[66.67%] w-full h-[225px] md:h-full object-cover " />
 
-                <div className=" h-full w-[33.33%] flex flex-col justify-between p-8">
+                <div className=" h-full md:w-[33.33%] w-full flex flex-col justify-between md:p-8 px-4 py-[30px] gap-14 md;gap-0">
                     
-                    <div className="font-bold [font-family:var(--font-anek-tamil)] text-5xl">
+                    <div className="font-bold [font-family:var(--font-anek-tamil)] text-3xl md:text-5xl">
                         DYNAMIC OPEN GYM
                     </div>
 
@@ -48,7 +62,7 @@ export default function AboutUs(){
 
                <div className="h-[480px] bg-[url('/image4.jpeg')] bg-cover bg-center flex items-center w-full relative">
 
-                           <div className=" w-[45%] text-white absolute bottom-4 left-4 font-bold [font-family:var(--font-anek-tamil)] text-5xl">WE'VE CREATED A SPACE WHERE YOU CAN RECONNECT WITH YOUR PRIMAL SELF.</div>
+                           <div className=" w-full md:w-[45%] text-white absolute bottom-4 left-4 font-bold [font-family:var(--font-anek-tamil)] text-3xl md:text-5xl">WE'VE CREATED A SPACE WHERE YOU CAN RECONNECT WITH YOUR PRIMAL SELF.</div>
 
              
 

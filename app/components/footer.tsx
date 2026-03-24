@@ -7,17 +7,17 @@ export default function Footer(){
     const router = useRouter();
 
     return(
-        <div className="bg-[#E9ECFF] border-t border-black h-[480px] px-8 py-8 flex flex-col justify-between">
+        <div className="bg-[#E9ECFF] border-t border-black h-auto md:h-[480px] md:px-8 md:py-8  px-5 pt-[27px] pb-[50px] flex flex-col justify-between md:gap-0 gap-20">
 
-              <div className='flex items-center justify-between'>
-                <img onClick={()=>router.push("/")} className="h-52 w-52" src="../icon.png" alt="logo"/>
+              <div className='flex flex-row md:gap-0 gap-6 flex-wrap items-center justify-between'>
+                <img onClick={()=>router.push("/")} className="md:h-52 md:w-52  h-32 w-32" src="../icon.png" alt="logo"/>
                 <div onClick={()=>router.push("/")} className="cursor-default font-extrabold text-5xl [font-family:var(--font-instrument)]">PrimalTraining</div>
             </div>
 
 
-            <div className="flex items-start justify-between">
+            <div className="flex flex-row flex-wrap md:items-start md:justify-between md:gap-0 gap-20">
 
-                <div className="flex flex-col gap-8 items-start">
+                <div className="flex flex-col gap-4 md:gap-8 items-start">
                     <div className="text-2xl font-bold [font-family:var(--font-anek-tamil)]">CONTACT</div>
                     <div className="flex flex-col">
                         <div className="font-bold text-sm [font-family:var(--font-geist-sans)]">Email: singhdaljit25126@gmail.com</div>
@@ -26,7 +26,7 @@ export default function Footer(){
                     </div>
                 </div>
 
-                      <div className="flex flex-col gap-8 items-start">
+                      <div className="flex flex-col gap-4 md:gap-8 items-start">
                     <div className="text-2xl font-bold font-[var(--font-anek-tamil)]">OPENING HOURS</div>
                     <div className="flex flex-col">
 
@@ -50,7 +50,7 @@ export default function Footer(){
                     </div>
                 </div>
 
-                      <div className="flex flex-col items-start gap-8">
+                      <div className="flex flex-col w-full md:w-auto items-start gap-4 md:gap-8">
                     <div className="text-2xl font-bold [font-family:var(--font-anek-tamil)]">SOCIAL</div>
                     <div className="flex flex-col">
                         <Link target="_blank" href="https://www.linkedin.com/in/singhdaljeet2001/" className="underline font-bold text-sm [font-family:var(--font-geist-sans)]">LinkedIn</Link>
