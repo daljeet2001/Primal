@@ -51,7 +51,7 @@ export default function Header(){
                 </div>
 
                  <div className="w-full md:w-[33.33%] border-t md:border-l border-black  h-full p-8 bg-[#E9ECFF] flex flex-col justify-between ">
-                    <div className="text-black text-28px md:text-4xl font-bold [font-family:var(--font-tamil)]">DYNAMIC OPEN GYM</div>
+                    <div className="text-black text-[28px] md:text-4xl font-bold [font-family:var(--font-tamil)]">DYNAMIC OPEN GYM</div>
 
                     <div className="flex flex-col justify-start  gap-4 ">
                         <div className="text-base text-black [font-family:var(--font-geist-sans)]">Our facility is the optimal environment for strength training and performance, equipped with top-of-the-line tools, training areas, and focus on functional movement.
